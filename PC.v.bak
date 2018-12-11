@@ -13,7 +13,10 @@ module pc(clk,newpc,rst,w,oldpc);
 			oldpc=newpc;
 		//reset oldpc
 		if (rst==1)
+		begin
 			oldpc=64'd0;
+			newpc=64'd0;
+		end
 	end
 //$time(delay);
 endmodule

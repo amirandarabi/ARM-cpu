@@ -16,7 +16,6 @@ module regbank(a,b,c,w,dataC,clk,dataA,dataB);
 		dataA=registerbank[a];
 		//fetch data from registerbank  and assign to dataB
 		dataB=registerbank[b];
-		//write dataC in registerbank
 		if (w==1)
 			registerbank[c]=dataC;
 		end
