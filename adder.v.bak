@@ -1,7 +1,0 @@
-module adder ( cin , a, b , s, cout);
-input [63:0] cin, b, a ;
-output [63:0] cout,s;
-
-assign s = a ^ b ^cin ;
-assign cout =(a & b)|(a & cin)|(b &cin);
-endmodule
