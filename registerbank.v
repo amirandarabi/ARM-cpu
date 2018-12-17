@@ -1,4 +1,4 @@
-module regbank(a,b,c,w,dataC,clk,dataA,dataB);
+module regbank(clk, a, b, c, w, dataC, dataA, dataB);
 	parameter delay =100;
 	// a and b are the address of read register . c is the address of write regiter 
 	input [4:0] a,b,c;
@@ -14,18 +14,11 @@ module regbank(a,b,c,w,dataC,clk,dataA,dataB);
 	//fetch data from registerbank  and assign to dataB
 	assign dataB=registerbank[b];
 
-	always @() 
+	always @(posedge clk) 
 		begin
 		#delay;
-		//registerbank[0] =12;
-
 		//write dataC in registerbank
 		if (w==1)
 			registerbank[c]=dataC;
 		end
-
-
-//assign dataA=registerbank[a];
-
-
-endmodule
+endmodule 

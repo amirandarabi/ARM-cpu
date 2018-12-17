@@ -1,0 +1,15 @@
+module CPU();
+clock c(clk);
+pc PC(clk,newpc,rst,w,oldpc);
+regbank register(clk, a, b, c, w, dataC, dataA, dataB);
+adder pcadder( cin , a, b , s, cout);
+adder jumpadder( cin , a, b , s, cout);
+datamemory dmemory(clk, address, data_in, read, write, data_out);
+instructionmemory imemory(clk, address ,data_out); 
+Mux regMUX( s, a, b, f);
+Mux aluMUX( s, a, b, f);
+Mux memMUX( s, a, b, f);
+Mux jumpMUX( s, a, b, f);
+signextend signex(in, out);
+
+endmodule 
