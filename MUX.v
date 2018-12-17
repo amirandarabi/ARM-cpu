@@ -8,7 +8,7 @@ module Mux( s, a, b, f);
 	begin
 		case(s)
        		0:f=a;
-			1:f=b;
+		1:f=b;
 		endcase
 	end
 endmodule
