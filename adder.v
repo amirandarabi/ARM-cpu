@@ -1,7 +1,7 @@
-module adder ( cin , b , s, cout);
-input [63:0]cin,b;
-output [63:0] cout,s;
+module adder ( cin , a, b , s, cout);
+input [31:0] cin, b, a ;
+output [31:0] cout,s;
 
-assign s = 64'd4 ^ b ^cin ;
-assign cout =(64'd4 & b)|(64'd4 & cin)|(b &cin);
+assign s = a ^ b ^cin ;
+assign cout =(a & b)|(a & cin)|(b &cin);
 endmodule
