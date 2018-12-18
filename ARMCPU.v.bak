@@ -18,7 +18,7 @@ ALU alu(dataRead1, aluMUX_Out, opAlu, Z, alu_Out);
 shift2left shift(signex_Out, shift_out);
 
 adder #(.n(63))jumpadder ( 0 ,signex_Out, oldpc , jumpadder_Out, cout);
-Mux jumpMUX (jumpMUX_selector, jumpadder_Out, pcadder_Out, newpc);
+Mux jumpMUX jumpMUX_selector, jumpadder_Out, pcadder_Out, newpc);
 datamemory dmemory(clk, alu_Out, dataRead2, read, write, dataMem_out);
 Mux memMUX(Mem_selector , dataMem_out, alu_Out, memMUX_Out);
 

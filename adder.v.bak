@@ -1,4 +1,5 @@
 module adder #(parameter n = 31)( cin , a, b , s, cout);
+#(parameter n = 31;)
 input [n:0] cin, b, a ;
 output [n:0] cout,s;
 

@@ -1,0 +1,11 @@
+module RUN();
+wire oldpc , newpc, dataA;
+
+clock c(clk);
+//input of adder is output of pc 
+//output of adder is input of pc
+adder Adder( oldpc , newpc);
+pc PC(clk,newpc,0,1,oldpc);
+//regbank register(a,b,c,w,dataC,clk,dataA,dataB);
+//ALU alu(dataA, B, Op, Z, F);
+endmodule 

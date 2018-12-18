@@ -2,7 +2,7 @@ module pc(clk, newpc, rst, w, oldpc);
 parameter delay = 100;
 input [31:0] newpc;
 input clk, w, rst;
-output reg[31:0] oldpc;
+output reg[61:0] oldpc;
 always@(posedge clk )
 
 	begin 

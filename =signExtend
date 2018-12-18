@@ -1,0 +1,8 @@
+module signExtend(i,j);
+	input [31:0]i;
+	output[63:0]j;
+	initial 
+	begin
+	j={{i[31]{32}}  ,i}
+	end
+endmodule
