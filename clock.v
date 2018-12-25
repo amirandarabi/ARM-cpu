@@ -1,8 +1,8 @@
-module clock(clk);
-output reg clk;
-always
-begin
-#100;clk = 0;
-#100;clk = 1;
-end
+module clock
+	#(parameter delay = 100)
+	(clk);
+	output reg clk = 1;
+
+	always #delay clk = ~clk;
 endmodule
+//checked
