@@ -1,10 +1,12 @@
 # ARM-cpu
 
-Designing a simple ARM CPU 
+>> Designing a simple ARM CPU
 
-We are using verilog language in this project
+>>Reference:
+    Computer Organization and Design:
+    The Hardware/Software Interface
+    ARM® Edition
+    
+>> We are using Verilog language in this project
 
 Group2 : Fatemeh Mohamadi - Amir Andarabi
-![Alt text](\Desktop\SE\1.jpg?raw=true "BOOK")
-
-
